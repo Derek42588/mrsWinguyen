@@ -32,16 +32,7 @@ exports.createPages = async ({ graphql, actions }) => {
   //allows us to easily request all our markdown data
   const result = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-
+ 
       
   allContentfulProductNew{
     totalCount
@@ -54,41 +45,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
     }
   `)
-
-  const posts = result.data.allMarkdownRemark.edges
-
-  posts.forEach(({ node: post }) => {
-    createPage({
-      path: `posts${post.fields.slug}`,
-      component: PostTemplate,
-      context: {
-        slug: post.fields.slug,
-      },
-    })
-  })
-
-  const postsPerPage = 6
-  const totalPages = Math.ceil(posts.length / postsPerPage)
-
-  Array.from({ length: totalPages }).forEach((_, index) => {
-    const currentPage = index + 1
-
-    const isFirstPage = index === 0
-    const isLastPage = currentPage === totalPages
-
-    createPage({
-      path: isFirstPage ? "/blog" : `/blog/${currentPage}`,
-      component: BlogTemplate,
-      context: {
-        limit: postsPerPage,
-        skip: index * postsPerPage,
-        isFirstPage,
-        isLastPage,
-        currentPage,
-        totalPages,
-      },
-    })
-  })
 
   const products = result.data.allContentfulProductNew.edges
 
