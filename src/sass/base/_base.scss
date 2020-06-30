@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%; // 1rem = 10px;
+
+  @include respond(tab-land){
+    font-size: 56.25%; //1 rem should be 9 px here == 56.25%
+  }
+  @include respond(tab-port){
+    font-size: 50%; //1rem should be 8 px here = 50%
+  }
+
+  @include respond(big-desktop){
+    font-size: 75%; //1 rem should be 12px, == 75%
+  }
+
+}
+
+.Main {
+  width: 100%;
+}
+body {
+  box-sizing: border-box;
+  font-size: 2rem;
+  // font-family: 'Open Sans', sans-serif;
+
+}
+
+

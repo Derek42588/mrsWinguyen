@@ -1,0 +1,25 @@
+.Reviews {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 10rem;
+
+
+  &__review-box {
+    width: 50%;
+    align-self: center;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    &__reviewer {
+        padding: 1rem;
+        font-weight: 600;
+    }
+
+    &__review {
+        padding: 1rem;
+
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.Layout {
+
+    background-color: $color-secondary;
+    color: $color-primary;
+
+  display: flex;
+  overflow: hidden;
+  font-size: 2rem;
+  flex-flow: row wrap;
+
+  @include respond(bpSmall){
+    font-size: 1.75rem;
+  }
+  @include respond(micro){
+    font-size: 1.5rem;
+  }
+}
+

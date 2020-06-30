@@ -1,0 +1,54 @@
+.italics {
+    font-style: italic;
+}
+.highlight-text {
+    color: $color-quaternary-dark;
+    font-weight: 600;
+}
+
+.header-large {
+    font-size: 7rem;
+
+    @include respond(bpSmall){
+        font-size: 6rem;
+      }
+    @include respond(bpSmaller){
+        font-size: 5.5rem;
+      }
+      @include respond(phone){
+        font-size: 4rem;
+      }
+
+      @include respond(micro){
+        font-size: 3rem;
+      }
+}
+
+.header-medium {
+    font-size: 4rem;
+
+    @include respond(bpSmall){
+        font-size: 3rem;
+      }
+    @include respond(bpSmaller){
+        font-size: 2.75rem;
+      }
+
+      @include respond(phone){
+        font-size: 2.25rem;
+      }
+}
+.header-small {
+    font-size: 2.5rem;
+
+    @include respond(bpSmall){
+        font-size: 2rem;
+      }
+    @include respond(bpSmaller){
+        font-size: 1.75rem;
+      }
+
+      @include respond(phone){
+        font-size: 1.5rem;
+      }
+}

@@ -1,0 +1,61 @@
+.Blog {
+  background-color: $color-tertiary;
+  color: $color-primary;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  padding: 3rem;
+  &__title {
+    width: 100%;
+    text-align: center;
+    // padding: 10rem 10rem 2rem 10rem;
+    grid-column: 1 / -1;
+    font-size: 4rem;
+    @include respond(phone){
+      font-size: 3.5rem;
+   
+     }
+    @include respond(micro){
+      font-size: 3rem;
+   
+     }
+  }
+
+  &__postCount {
+    text-align: center;
+    font-size: 2.5rem;
+    @include respond(phone){
+      font-size: 2rem;
+   
+     }
+    grid-column: 1 / -1;
+  }
+
+  @include respond(bpSmall){
+    grid-template-columns: repeat(2, 1fr);
+ 
+   }
+  @include respond(phone){
+    grid-template-columns: 1fr;
+    padding: 6rem;
+ 
+   }
+}
+
+.BlogFooter {
+  padding: 3rem;
+  background-color: $color-tertiary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-primary;
+  margin: 0 auto;
+  & a {
+    text-decoration:none;
+  }
+
+  &__item{
+    padding: 1.5rem;
+  }
+}

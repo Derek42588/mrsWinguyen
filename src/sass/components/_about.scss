@@ -1,0 +1,25 @@
+.About {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    &__logo-icon {
+        width:50%;
+        height:30rem;
+        fill: $color-primary;
+    }
+
+    &__title-box{
+        width: 50%;
+        align-self: center;
+
+    &__title {
+        font-size: 6rem;
+        padding-top: 3rem;
+    }
+
+    &__description {
+        padding-top: 3rem;
+        font-style: italic;
+    }
+}
+}

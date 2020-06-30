@@ -1,0 +1,17 @@
+.Products {
+    background-color: orangered;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+     &__product {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+     }
+
+     &__title {
+         grid-column: 1 / -1;
+         text-align: center;
+     }
+}

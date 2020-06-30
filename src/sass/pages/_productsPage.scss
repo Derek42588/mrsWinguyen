@@ -1,0 +1,36 @@
+.ProductsPage {
+    
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+
+    &__title {
+        width: 100%;
+        font-size: 4rem;
+        text-align:center;
+    }
+
+    &__products {
+        width: 80%;
+        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+
+        &__product-box {
+
+            &__title {
+                font-size:2rem;
+            }
+
+            &__image-box{
+                &__image {
+                
+                }
+            }
+         
+        }
+    }
+}

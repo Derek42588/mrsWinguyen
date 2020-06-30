@@ -1,0 +1,36 @@
+.ProductPage {
+
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &__product-box{
+        padding: 2rem;
+        text-align: center;
+        width: 66%;
+        display: flex;
+    flex-flow: column wrap;
+    align-self: center;
+    justify-self: center;
+    min-height:100vh;
+    
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__desc {
+
+    }
+
+    &__img-box {
+        width: 50%;
+        align-self: center;
+
+        &__img {
+            
+        }
+    }
+}
+}
