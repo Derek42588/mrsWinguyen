@@ -1,12 +1,15 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
+
+// import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 const Featured = () => {
-  const { first, second, third } = useStaticQuery(
+  const { totes, pouches, cards } = useStaticQuery(
     graphql`
       query {
-        first: file(relativePath: { eq: "featured-1.jpg" }) {
+        totes: file(relativePath: { eq: "featured-totes.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -14,7 +17,7 @@ const Featured = () => {
           }
         }
 
-        second: file(relativePath: { eq: "featured-2.jpg" }) {
+        pouches: file(relativePath: { eq: "featured-pouches.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -22,7 +25,7 @@ const Featured = () => {
           }
         }
 
-        third: file(relativePath: { eq: "featured-3.jpg" }) {
+        cards: file(relativePath: { eq: "featured-cards.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -35,44 +38,40 @@ const Featured = () => {
 
   return (
     <div className="Featured">
-      <h1 className="Featured__title">Featured Items</h1>
       <div className="Featured__gallery">
-        <div className="Featured__gallery__image-box">
-          <Img
-            fluid={first.childImageSharp.fluid}
-            alt="Featured Pic - 1"
-            className="Featured__gallery__image-box__image"
+        <Link to="/shop" className="Featured__gallery__image-box">
+          <BackgroundImage
+            fluid={totes.childImageSharp.fluid}
+            alt="Featured Pic - Totes"
+            className="background-image"
           />
-                    <div className="Featured__gallery__image-box__description">
-
-            <span>$35.00</span>
-            <span>Personalized Zipper Pouch</span>
-            </div>
-        </div>
-        <div className="Featured__gallery__image-box">
-          <Img
-            fluid={second.childImageSharp.fluid}
-            alt="Featured Pic - 1"
-            className="Featured__gallery__image-box__image"
+          <div className="content">
+            <h1 className="title">Totes</h1>
+            <span className="subtitle">Shop Now</span>
+          </div>
+        </Link>
+        <Link to="/shop" className="Featured__gallery__image-box">
+          <BackgroundImage
+            fluid={pouches.childImageSharp.fluid}
+            alt="Featured Pic - Pouches"
+            className="background-image"
           />
-          <div className="Featured__gallery__image-box__description">
-            <span>$35.00</span>
-            <span>Personalized Dip Dye Zipper Pouch</span>
-            </div>
-        </div>
-        <div className="Featured__gallery__image-box">
-          <Img
-            fluid={third.childImageSharp.fluid}
-            alt="Featured Pic - 1"
-            className="Featured__gallery__image-box__image"
+          <div className="content">
+            <h1 className="title">Pouches</h1>
+            <span className="subtitle">Shop Now</span>
+          </div>
+        </Link>
+        <Link to="/shop" className="Featured__gallery__image-box">
+          <BackgroundImage
+            fluid={cards.childImageSharp.fluid}
+            alt="Featured Pic - Cards"
+            className="background-image"
           />
-                              <div className="Featured__gallery__image-box__description">
-
-            <span>$35.00</span>
-            <span>Hummingbird Leather Pouch</span>
-            </div>
-
-        </div>
+          <div className="content">
+            <h1 className="title">Cards</h1>
+            <span className="subtitle">Shop Now</span>
+          </div>
+        </Link>
       </div>
     </div>
   )

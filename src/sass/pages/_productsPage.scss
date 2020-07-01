@@ -13,6 +13,11 @@
     }
 
     &__products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+        padding: 3rem;
+      
         width: 80%;
         align-self: center;
         display: grid;
@@ -20,15 +25,31 @@
         grid-gap: 2rem;
 
         &__product-box {
-
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content auto;
+            text-decoration: none;
+            color: $color-primary;
+            grid-gap: 1rem;
+           transition: all .2s;
+        
             &__title {
                 font-size:2rem;
             }
 
             &__image-box{
-                &__image {
-                
+                width: 100%;
+                justify-self:center;
+                height: 30rem;
+                // height: 100%;
+        
+                &__image{
+                 width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
                 }
+              
             }
          
         }

@@ -5,32 +5,57 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .product-button {
+        width: 33%;
+        align-self: center;
+    }
     
     &__product-box{
         padding: 2rem;
         text-align: center;
-        width: 66%;
+        width: 90%;
         display: flex;
     flex-flow: column wrap;
     align-self: center;
     justify-self: center;
     min-height:100vh;
-    
+
     &__title {
         font-size: 3rem;
     }
 
-    &__desc {
 
-    }
-
-    &__img-box {
-        width: 50%;
+    
+    &__gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+        padding: 3rem;
+      
+        width: 80%;
         align-self: center;
-
-        &__img {
-            
+        display: grid;
+        grid-gap: 2rem;
+        &__img-box{
+            width: 100%;
+            justify-self:center;
+            height: 30rem;
+            // height: 100%;
+    
+            &__image {
+             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            }
+          
         }
     }
-}
+
+    }
+    
+    
+   
+
+    
 }

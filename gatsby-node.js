@@ -15,38 +15,35 @@ const BlogTemplate = path.resolve("./src/templates/blog-template.js")
 const ProductTemplate = path.resolve("./src/templates/product-template.js")
 // const ProductTemplate = path.resolve("./src/templates/product-template.js")
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({ node, getNode, basePath: "posts" })
-    createNodeField({
-      node,
-      name: "slug",
-      value: slug,
-    })
-  }
-}
+// exports.onCreateNode = ({ node, getNode, actions }) => {
+//   const { createNodeField } = actions
+//   if (node.internal.type === "MarkdownRemark") {
+//     const slug = createFilePath({ node, getNode, basePath: "posts" })
+//     createNodeField({
+//       node,
+//       name: "slug",
+//       value: slug,
+//     })
+//   }
+// }
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   //allows us to easily request all our markdown data
   const result = await graphql(`
     {
- 
-      
-  allContentfulProductNew{
-    totalCount
-    edges{
-      node{
-        slug
+      allContentfulProduct {
+        totalCount
+        edges {
+          node {
+            slug
+          }
         }
       }
     }
-
-    }
   `)
 
-  const products = result.data.allContentfulProductNew.edges
+  const products = result.data.allContentfulProduct.edges
 
   products.forEach(({ node: product }) => {
     createPage({
@@ -54,9 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: ProductTemplate,
       context: {
         slug: product.slug,
-      }
+      },
     })
   })
-
 }
-

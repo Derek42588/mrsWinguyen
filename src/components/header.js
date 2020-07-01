@@ -1,13 +1,10 @@
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import React from "react"
+// import CartIcon from './cart-icon'
+import IconShopping from '../assets/cart.svg'
 
-import IconGithub from "../assets/github.svg"
-import IconPDF from "../assets/file-pdf.svg"
-import IconPhone from "../assets/mobile.svg"
-import IconEmail from "../assets/mail4.svg"
 
-import resume from "../media/DCP Resume 6420.pdf"
 
 const Header = ({ toggleShelf }) => (
   <div className="NavBar">
@@ -30,7 +27,9 @@ const Header = ({ toggleShelf }) => (
       </li>
       <li className="NavBar__nav__item NavBar__nav__item--full snipcart-summary snipcart-checkout">
         <span className="NavBar__nav__item__span">
-        Cart
+          <IconShopping className="NavBar__nav__item__sublist__item__icon"/>
+          <span className="snipcart-total-items"/>
+
         </span>
       </li>
     </ul>

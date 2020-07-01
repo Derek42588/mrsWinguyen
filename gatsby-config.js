@@ -2,8 +2,8 @@ const dotenv = require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Derek Pyle | Developer`,
-    description: `Personal Portfolio via Gatsby`,
+    title: `Ally Nguyen | Designs`,
+    description: `Handcrafted Goods Made From Natural Materials`,
     author: `Derek Pyle`,
   },
   plugins: [

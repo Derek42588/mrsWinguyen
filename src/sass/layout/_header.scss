@@ -50,12 +50,9 @@
             &__icon {
               width: 2rem;
               height: 2rem;
-              fill: $color-quaternary;
-              transition: all .4s;
-              &:hover {
-                fill: $color-quaternary-dark;
-                transform: scale(2);
-              }
+              fill: $color-secondary;
+              margin-right: 2rem;
+            
             }
           }
         }
@@ -92,7 +89,7 @@
       }
       &__span {
         cursor: pointer;
-        display: grid;
+        display: flex;
             align-items: center;
             justify-content: center;
           color: $color-secondary;
@@ -109,6 +106,10 @@
           &:hover {
             background-color: $color-secondary;
             color: $color-primary;
+
+            & > .NavBar__nav__item__sublist__item__icon {
+              fill: $color-primary;
+            }
           }
       }
       

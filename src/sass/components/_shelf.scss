@@ -1,5 +1,5 @@
 .Shelf {
-    background-color: $color-tertiary;
+    background-color: $color-primary;
     width: 0;
     height: 100%;
     position: fixed;
@@ -23,7 +23,7 @@
         top: 15%;
         left: -100%;
         list-style: none;
-        color: $color-primary;
+        color: $color-secondary;
         transition: all .6s;
         align-self: start;
         justify-self: start;
@@ -55,7 +55,7 @@
 
             &__link {
                 text-decoration: none;
-                color: $color-primary;
+                color: $color-secondary;
                 font-weight: 700;
                 cursor: pointer;
 
@@ -63,16 +63,15 @@
 
   
 
-            &:not(:last-of-type) {
                 &:hover {
-                    background-color: $color-primary;
+                    background-color: $color-secondary;
+                    color: $color-primary;
                     
           
                 }
-            }
 
             &:hover > &__link {
-                color: $color-tertiary;
+                color: $color-primary;
             }
 
     }

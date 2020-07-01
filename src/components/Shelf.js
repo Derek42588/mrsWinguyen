@@ -15,55 +15,16 @@ const Shelf = ({ toggleShelf, shelfVisible }) => {
     <div className={'Shelf' + (shelfVisible ? ' shelfVisible' : '')}>
       <ul className="Shelf__list">
         <li className="Shelf__list__item">
-          <Link to = "/#AboutMe" className = "Shelf__list__item__link" onClick = {() => toggleShelf()}>
-                  About Me
+          <Link to = "/" className = "Shelf__list__item__link" onClick = {() => toggleShelf()}>
+                  Home
             </Link>
         </li>
         <li className="Shelf__list__item">
-        <Link to = "/#Projects" className = "Shelf__list__item__link"  onClick = {() => toggleShelf()}>
-                  Projects
+        <Link to = "/shop" className = "Shelf__list__item__link"  onClick = {() => toggleShelf()}>
+                  Shop
             </Link>
-        </li>
-        <li className="Shelf__list__item">
-        <Link to = "/#Contact" className = "Shelf__list__item__link"  onClick = {() => toggleShelf()}>
-                  Contact
-            </Link>
-        </li>
-        <li className="Shelf__list__item">
-        <Link to = "/blog" className = "Shelf__list__item__link"  onClick = {() => toggleShelf()}>
-                  Blog
-            </Link>
-        </li>
-        <li className="Shelf__list__item Shelf__list__item--toolbox">
-        <ul className="Shelf__list__item__sublist">
-            <li className="Shelf__list__item__sublist__item">
-              <a href="https://github.com/Derek42588">
-                <IconGithub className="Shelf__list__item__sublist__item__icon"/>
-              </a>
-            </li>
-            <li className="Shelf__list__item__sublist__item">
-              <a target="_blank" href={resume}>
-                <IconPDF className="Shelf__list__item__sublist__item__icon" />
-              </a>
-            </li>
-            <li className="Shelf__list__item__sublist__item">
-              <a href="tel:+1(201)400-9742">
-                <IconPhone className="Shelf__list__item__sublist__item__icon" />
-              </a>
-            </li>
-            <li className="Shelf__list__item__sublist__item">
-              <a href="mailto:derekpyle@gmail.com">
-                <IconEmail className="Shelf__list__item__sublist__item__icon" />
-              </a>
-            </li>
-          </ul>
-        </li>
+        </li>        
       </ul>
-      {/* <ul className="Shelf__icons-list">
-          <li className="Shelf__icons-list__item">1</li>
-          <li className="Shelf__icons-list__item">1</li>
-          <li className="Shelf__icons-list__item">1</li>
-      </ul> */}
     </div>
   );
 };

@@ -9,17 +9,38 @@
     width: 50%;
     align-self: center;
     padding: 2rem;
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-    &__reviewer {
-        padding: 1rem;
-        font-weight: 600;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .background-image {
+      grid-column: 1/ span 1;
     }
+    // &__reviewer {
+    //     padding: 1rem;
+    //     font-weight: 600;
+    // }
 
     &__review {
         padding: 1rem;
+        grid-column: 2/-1;
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        justify-content: center;
 
+        &__reviewer {
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+          font-style: italic;
+        }
+
+        &__quote {
+
+        }
     }
+  }
+
+  .circle {
+    clip-path: circle(40% at 50% 50%);
   }
 }
